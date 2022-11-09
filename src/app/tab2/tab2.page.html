@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<div>
+
+
+</div>
+
+<ion-list>
+  <ion-item *ngFor="Let catal of catalogo">
+    <ion-avatar slot="start">
+      <ion-img [src]="catalogo.imageURL"></ion-img>
+    </ion-avatar>
+    <ion-label>
+    {{catalogo.title}}
+    </ion-label>
+  </ion-item>
+</ion-list>
+  
+</ion-content>
