@@ -17,15 +17,41 @@
 
 </div>
 
-<ion-list>
-  <ion-item *ngFor="Let catal of catalogo">
-    <ion-avatar slot="start">
-      <ion-img [src]="catalogo.imageURL"></ion-img>
-    </ion-avatar>
-    <ion-label>
-    {{catalogo.title}}
-    </ion-label>
-  </ion-item>
-</ion-list>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Remeras</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item [routerLink]="[]">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://th.bing.com/th/id/OIP.J0s_0JSwr8OkD4VuOzOmTwHaHW?pid=ImgDet&rs=1" />
+        </ion-thumbnail>
+        <ion-label>Remera Ramones   $4600</ion-label>
+      </ion-item>
+
+      <ion-item [routerLink]="[]">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/245/487/products/muestra111-475f37302ad1161daa16074739052881-1024-1024.jpg" />
+        </ion-thumbnail>
+        <ion-label>Remera Guns n Roses   $4600</ion-label>
+      </ion-item>
+
+      <ion-item [routerLink]="[]">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="cle" />
+        </ion-thumbnail>
+        <ion-label>Item</ion-label>
+      </ion-item>
+
+      <ion-item [routerLink]="[]" lines="none">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>Item</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
   
 </ion-content>
