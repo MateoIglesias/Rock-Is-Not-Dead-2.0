@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },
+  {
+    path: ':prendaId',
+    loadChildren: () => import('./prenda/prenda.module').then( m => m.PrendaPageModule)
   }
 ];
 

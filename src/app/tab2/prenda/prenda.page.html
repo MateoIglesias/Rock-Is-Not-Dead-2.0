@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+  		<ion-back-button  defaultHref="/tab2" color="dark"></ion-back-button>
+  	</ion-buttons>
+    <ion-title>{{prenda.titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+<ion-card>
+
+
+	<h2>Detalles de la prenda</h2>
+
+	<ion-card class="cardInfo">
+	  <ion-card-header class="headerInfo">
+		<ion-img [src]="prenda.imageURL"></ion-img>
+	  </ion-card-header>
+
+	  <ion-card-content class="contentInfo">
+	    <ion-card-subtitle class="subtitleInfo">Promoción Mayorista</ion-card-subtitle><br>
+	    <ion-card-title class="titleInfo">{{prenda.nombre}}</ion-card-title>
+	     <p class="pInfo"> 
+	    <b>Valor: $ {{prenda.price}}</b>
+	      </p>
+	  </ion-card-content>
+	</ion-card><br>
+
+
+	<ion-card> 
+	      <ion-card-header color="light">
+	        <b>Descripción de la prenda</b>
+	      </ion-card-header>
+	      <ion-card-content>
+	        <br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      </ion-card-content>
+	</ion-card><br>
+	    
+	    	<label>Cantidad: </label><input type="number" min="1"><br><br>
+	      <ion-button class="ion-text-center btnCarrito" (click)="presentAlert();">
+		    <b>AÑADIR AL CARRITO</b>
+		  </ion-button><br><br>
+		  
+
+
+	<ion-card>
+	  <ion-card-content>
+	     <h3>COMENTARIOS Y RESEÑAS</h3>
+	  </ion-card-content>
+	</ion-card>
+	<ion-card>
+	  <ion-card-content>
+	     <ion-list *ngIf="prenda.comments && prenda.comments.length > 0; else noComments">
+	     	<ion-item>
+	     		<ion-avatar slot="start">
+					<img src="https://assets.stickpng.com/images/585e4bd7cb11b227491c3397.png">
+				</ion-avatar>
+	     		: {{prenda.comment}}
+	     	</ion-item>
+	     </ion-list>
+	     <ng-template #noComments>
+	     	<h4 class="ion-text-center">No hay ningún comentario aún.</h4>
+	 	</ng-template>
+	  </ion-card-content>
+	</ion-card>
+
+
+</ion-card>
+
+
+
+
+
+</ion-content>

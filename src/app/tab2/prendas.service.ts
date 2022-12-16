@@ -6,9 +6,12 @@ import { Injectable } from '@angular/core';
 export class PrendasService {
 
   constructor() { }
+
+  async getPrendas() {
+    const res = await fetch("http://localhost:8080/prenda")
+    const resjson = (await res).json()
+    return resjson
 }
-async getPrendas() {
-  const res = await fetch()
-  const resjson = (await res).json()
-  return resjson
+
 }
+

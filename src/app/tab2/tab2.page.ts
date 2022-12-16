@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { PrendasService } from './prendas.service';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,19 +10,20 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  
+  constructor(private prendaService: PrendasService,
+    public alertController: AlertController, prendasService:PrendasService) {}
 
-  constructor() {}
 
+  SearchTerm: string;
   prendas = []
-  todaslasprendas = []
+  todasLasPrendas = []
+  
+  ngOnInit(){
+    this.getPrendas()
+  }
+ async getPrendas(){
+  this.prendas = await this.prendaService.getPrendas()
+  console.table(this.prendas)
+ }
 
-  this.getPrendas()
-
-}
-
-async getPrendas() {
-  this.prendas = await this.productService.getPrendas()
-  consol.table(this.prendas);
-  this.todasLasPrendas = Array.from(this.prendas)
 }

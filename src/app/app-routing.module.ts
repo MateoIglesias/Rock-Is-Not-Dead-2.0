@@ -7,9 +7,16 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'catalogo',
-    loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
-  }
+    path: 'tab2',
+    loadChildren: ()=> import('./tab2/tab2.module').then(m => m.Tab2PageModule)
+  },
+  {
+    path: ':prendaId',
+    loadChildren: () => import('./tab2/prenda/prenda.module').then( m => m.PrendaPageModule)
+  },
+ 
+ 
+  
 ];
 @NgModule({
   imports: [

@@ -1,8 +1,22 @@
-.guitarra{
-    align-items: center;
-    justify-content: center;
+ion-content.background{
+    --background: url(https://i.pinimg.com/736x/d2/7d/65/d27d65e5fec879eda30a775400dd7d4d.jpg) 0 0/100% 100% no-repeat;
 }
-ion-card-header.ios {
+
+ion-content {
+    font-family: 'New Rocker', cursive;
+}
+ion-card-header.remeras {
     display: flex;
     flex-flow: column-reverse;
   }
+
+ion-title {
+    
+    color: black;
+    text-align: center;
+}
+ion-header {
+    color: black;
+}
+
+
